@@ -1,0 +1,17 @@
+name: tdi_env
+channels:
+- conda-forge
+- bioconda
+- defaults
+dependencies:
+- jupyter_client
+- jupyter_core
+- pandas
+- pandoc
+- pip
+- python=3.6.7
+- requests
+- scikit-bio
+- scikit-learn
+- scipy
+- seaborn
