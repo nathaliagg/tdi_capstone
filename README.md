@@ -27,6 +27,8 @@ $ conda env create -f tdi_env.yml
 $  conda activate tdi_env
 
 (tdi_env) $  conda install -c conda-forge tensorflow==1.15
+
+(tdi_env) $  conda install -c conda-forge keras
 ```
 
 ## 3 - [Download](0_download_data.ipynb)
