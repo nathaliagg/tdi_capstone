@@ -4,8 +4,7 @@ channels:
 - bioconda
 - defaults
 dependencies:
-- jupyter_client
-- jupyter_core
+- jupyter
 - pandas
 - pandoc
 - pip
