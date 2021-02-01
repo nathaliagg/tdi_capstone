@@ -19,6 +19,11 @@ For my TDI Capstone Project, I am using a subset of these data (~ 4.4 Gb) repres
 This subset dataset contains over 21,000 farmland images from 2019, and six annotatios: *cloud shadow, double plant, planter skip, standing water, waterway and weed cluster*. These six patterns are stored separately as binary masks due to potential overlaps between patterns. Each field image has a file name in the format of \(field id)_(x1)-(y1)-(x2)-(y2).(jpg/png). Each field id uniquely identifies the farmland that the image is cropped from, and (x1, y1, x2, y2) is a 4-tuple indicating the position in which the image is cropped.
 
 
+**Why Agriculture-Vision?**
+
+
+
+
 ## 2 - Conda Environment
 
 ```{bash}
@@ -35,7 +40,7 @@ $  conda activate tdi_env
 I had a few installation issues. The only way it worked for me was installing libraries in the jupyter [notebook](1_install_libraries.ipynb).
 
 
-## 3 - [Download](0_download_data.ipynb)
+## 3 - Download
 
 I contacted the authors of the paper [1], and they sent me a link to a Google Drive where the data was deposited.
 
@@ -43,14 +48,18 @@ I contacted the authors of the paper [1], and they sent me a link to a Google Dr
 
 For my initial exploratory analysis, I decided to use a partial dataset because I don't know how to handle multiple label classes for a single image yet.
 
-I selected only the training and validation images that have one label. For that, I tested if the [image masks](./2_get_single_image_files.ipynb), which are black & white, were all black (no label) in them using `.getextrema() == (0, 0)`. I added that information in a dictionary data structure that I converted into a `pd.DataFrame()`.
+GoogleColab and my computer can't handle this massive amount of data, so I am limiting my exploratory analysis to include only images with single labels from the validation set, which yielded 4,714 total images.
 
-There were a lot of files that were excluded in this process (not gonna lie...). A total of 62,970 training images and 21,871 validation images were excluded in this process. The resulting training dataset has 12,901 images, and the validation dataset has 4,431 images.
+1. To selected only validation masks that have one label, I tested if the [image masks](./2_get_single_image_files.ipynb), which were black & white, were all black (no label) in them using `.getextrema() == (0, 0)`. I added that information in a dictionary data structure that I converted into a `pd.DataFrame()`.
 
-Subsequently, I changed the mask [color channels](./3_create_label_ccolor_channels.ipynb).
+2. Then, I saved the RGB images into a `partial_dataset` directory for training the model.
 
 
 ## 5 - Exploratory CNN model development
+
+My first model was a Convolutional Neural Network (CNN). I divided the dataset into training (2,828) and test (1,886) datasets, and resized the images to (300, 300). I also used all six classes: cloud shadow, double_plant, planter skip, standing water, waterway, and weed cluster, and each label received a number from 0 to 5, respectively.
+
+The CNN model isn't great. It has a 72% accuracy on test data. I have not done hyperparamenter tunning, because in the original paper [1] the authors discussed that the model they recommend for these data is Intersection over Union (IoU).
 
 
 

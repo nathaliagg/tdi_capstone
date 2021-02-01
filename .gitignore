@@ -1,7 +1,12 @@
 *.DS_Store
 .DS_Store
 dataset/*
+partial_dataset/*
 paper/*
+model_1_CNN/*
+partial_dataset.zip
+training_singles.csv
+validation_singles.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
