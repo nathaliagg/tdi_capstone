@@ -62,6 +62,9 @@ My first model was a Convolutional Neural Network (CNN). I divided the dataset i
 The CNN model isn't great. It has a 72% accuracy on test data. I have not done hyperparamenter tunning, because in the original paper [1] the authors discussed that the model they recommend for these data is Intersection over Union (IoU).
 
 
+## 6 - Preliminary Project App
+
+![CNN App](cnn_app.gif)
 
 ## References
 
