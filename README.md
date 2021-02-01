@@ -2,10 +2,10 @@
 
 ## Content
 
-- 1 - [AgricultureVision](#agriculturevision)  
+- 1 - [AgricultureVision](#1---agriculturevision)  
     a. [Why Agriculture-Vision?](#why-agriculture-vision?)  
-- 2 - [Conda Environment](#conda-environment)
-- 3 - [Download](#download)
+- 2 - [Conda Environment](#2---conda-environment)
+- 3 - [Download](#3-download)
 - 4 - [Exploratory Data Preparation](#exploratory-data-preparation)
 - 5 - [Exploratory CNN model development](#exploratory-cnn-model-development)
 - 6 - [Preliminary Project App](#preliminary-project-app)
