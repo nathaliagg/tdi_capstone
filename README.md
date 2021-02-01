@@ -2,17 +2,16 @@
 
 ## Content
 
-- 1 - [AgricultureVision](#agvision)  
-    a. [Why Agriculture-Vision?](#why)  
-- 2 - [Conda Environment](#conda)
+- 1 - [AgricultureVision](#agriculturevision)  
+    a. [Why Agriculture-Vision?](#why-agriculture-vision?)  
+- 2 - [Conda Environment](#conda-environment)
 - 3 - [Download](#download)
-- 4 - [Exploratory analysis - data preparation](#dataprep)
-- 5 - [Exploratory CNN model development](#cnn)
-- 6 - [Preliminary Project App](#app)
+- 4 - [Exploratory Data Preparation](#exploratory-data-preparation)
+- 5 - [Exploratory CNN model development](#exploratory-cnn-model-development)
+- 6 - [Preliminary Project App](#preliminary-project-app)
 - [References](#references)
 
 ---
-#agvision
 ## 1 - AgricultureVision
 
 The AgricultureVision dataset [1] is joint effort with many research scientists to bring artificial intelligence and agriculture together.
@@ -24,12 +23,11 @@ For my TDI Capstone Project, I am using a subset of these data (~ 4.4 Gb) repres
 This subset dataset contains over 21,000 farmland images from 2019, and six annotatios: *cloud shadow, double plant, planter skip, standing water, waterway and weed cluster*. These six patterns are stored separately as binary masks due to potential overlaps between patterns. Each field image has a file name in the format of \(field id)_(x1)-(y1)-(x2)-(y2).(jpg/png). Each field id uniquely identifies the farmland that the image is cropped from, and (x1, y1, x2, y2) is a 4-tuple indicating the position in which the image is cropped.
 
 
-#why
-### Why Agriculture-Vision?
 
+### Why Agriculture-Vision?
+TODO.
 
 ---
-#conda
 ## 2 - Conda Environment
 
 ```{bash}
@@ -47,15 +45,13 @@ I had a few installation issues. The only way it worked for me was installing li
 
 
 ---
-#download
 ## 3 - Download
 
 I contacted the authors of the paper [1], and they sent me a link to a Google Drive where the data was deposited.
 
 
 ---
-#dataprep
-## 4 - Exploratory analysis - data preparation
+## 4 - Exploratory Data Preparation
 
 For my initial exploratory analysis, I decided to use a partial dataset because I don't know how to handle multiple label classes for a single image yet.
 
@@ -67,7 +63,6 @@ GoogleColab and my computer can't handle this massive amount of data, so I am li
 
 
 ---
-#cnn
 ## 5 - Exploratory CNN model development
 
 My first model was a Convolutional Neural Network (CNN). I divided the dataset into training (2,828) and test (1,886) datasets, and resized the images to (300, 300). I also used all six classes: cloud shadow, double_plant, planter skip, standing water, waterway, and weed cluster, and each label received a number from 0 to 5, respectively.
@@ -76,14 +71,12 @@ The CNN model isn't great. It has a 72% accuracy on test data. I have not done h
 
 
 ---
-#app
 ## 6 - Preliminary Project App
 
 ![CNN App](cnn_app.gif)
 
 
 ---
-#references
 ## References
 
 1 - Mang Tik Chiu, Xingqian Xu, Yunchao Wei, Zilong Huang, Alexander Schwing, Robert Brunner,  Hrant Khachatrian, Hovnatan Karapetyan, Ivan Dozier, Greg Rose, David Wilson, Adrian Tudor, Naira Hovakimyan, Thomas S. Huang, and Honghui  Shi. Agriculture-vision: A large aerial image database for agricultural pattern analysis. arXiv preprint arXiv:2001.01306, 2020
