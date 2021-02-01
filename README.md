@@ -3,7 +3,7 @@
 ## Content
 
 - 1 - [AgricultureVision](#1---agriculturevision)  
-        1.a. [Why AgricultureVision?](#why-agriculturevision?)  
+        1.a. [Why AgricultureVision?](#why-agriculturevision)  
 - 2 - [Conda Environment](#2---conda-environment)
 - 3 - [Download](#3---download)
 - 4 - [Exploratory Data Preparation](#4---exploratory-data-preparation)
@@ -24,7 +24,7 @@ This subset dataset contains over 21,000 farmland images from 2019, and six anno
 
 
 
-### Why AgricultureVision?
+### Why AgricultureVision
 TODO.
 
 ---
